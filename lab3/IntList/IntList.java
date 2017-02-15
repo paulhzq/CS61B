@@ -81,10 +81,10 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        if(A == NULL)
+        if(A == null)
             return B;
         else
-            A.tail = dcatenate(A.tail,B)
+            A.tail = dcatenate(A.tail,B);
 
         return A;
     }
@@ -225,5 +225,26 @@ public class IntList {
         out.format(")");
         return out.toString();
     }
+    /**
+     * Returns the reverse of the given IntList.
+     * This method is destructive. If given null
+     * as an input, returns null.
+     */
+    public static IntList reverse(IntList A) {
+        IntList a = A;
+        if(a == null){
+            return null;
+        }
+        IntList frontOfReversed =null;
+        IntList nextNodeToAdd = a;
+        while(nextNodeToAdd !=null) {
+            IntList remainderOfOriginal = nextNodeToAdd.tail;
+            nextNodeToAdd.tail = frontOfReversed;
+            frontOfReversed = nextNodeToAdd;
+            nextNodeToAdd = remainderOfOriginal;
+        }
+        return frontOfReversed;
+    }
+
 }
 
