@@ -1,17 +1,17 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class TestArrayDeque1B {
+public class TestLinkedListDeque1B {
     @Test
     public void TestIsEmpty() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       boolean result=saq1.isEmpty();
       assertEquals(true,result);
     }
 
     @Test
     public void TestAddFrist() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addFirst(5);
       int size = saq1.size();
       //int item = saq1.get(0);
@@ -20,7 +20,7 @@ public class TestArrayDeque1B {
     }
     @Test
     public void TestAddFrist2() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addFirst(5);
       int item = saq1.get(0);
       assertEquals(5,item);
@@ -28,7 +28,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddFirst3(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addFirst(5);
       saq1.addFirst(10);
       int item = saq1.get(1);
@@ -37,7 +37,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddFirst4(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addFirst(5);
       saq1.addFirst(10);
       int item = saq1.get(0);
@@ -46,7 +46,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddLast(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(5);
       int item = saq1.get(0);
       assertEquals(5,item);
@@ -54,7 +54,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddLast2(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(5);
       saq1.addLast(10);
       int item = saq1.get(1);
@@ -63,7 +63,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddLast3(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(5);
       saq1.addLast(10);
       saq1.addFirst(3);
@@ -73,7 +73,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestAddLast4(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(5);
       saq1.addLast(10);
       int item = saq1.get(1);
@@ -82,14 +82,14 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestRemoveFirst(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       Integer result =saq1.removeFirst();
       assertEquals(null,result);
     }
 
     @Test
     public void TestRemoveFirst2(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addFirst(1);
       saq1.addFirst(2);
       saq1.addFirst(3);
@@ -101,7 +101,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestRemoveFirst3(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(1);
       saq1.addLast(2);
       saq1.addLast(3);
@@ -112,14 +112,14 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestRemoveLast(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       Integer result =saq1.removeLast();
       assertEquals(null,result);
     }
 
     @Test
     public void TestRemoveLast2(){
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(1);
       saq1.addLast(2);
       saq1.addLast(3);
@@ -132,7 +132,7 @@ public class TestArrayDeque1B {
     /*Test the array resize if size==array.length*/
     @Test
     public void TestArrayResize() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(1);
       saq1.addLast(2);
       saq1.addLast(3);
@@ -148,7 +148,7 @@ public class TestArrayDeque1B {
 
     @Test
     public void TestArrayResize2() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       saq1.addLast(1);
       saq1.addLast(2);
       saq1.addLast(3);
@@ -167,7 +167,7 @@ public class TestArrayDeque1B {
     /*this is the bug found,when double size the array,run this test should getthe 17 but actually get 16.*/
     @Test
     public void TestArrayResize3() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       for(int i =1;i<=20;i++) {
         saq1.addLast(i);
       }
@@ -175,15 +175,12 @@ public class TestArrayDeque1B {
         saq1.removeFirst();
       }
       int result =saq1.get(0);
-      //assertEquals(,17,result);
-      assertEquals("Oh noooo!\nThis is bad:\n resize and get the first number " + result
-                   + " not equal to " + "17" + "!",
-                   17, result);
+      assertEquals(17,result);
     }
 
     @Test
     public void TestArrayResize4() {
-      StudentArrayDeque<Integer> saq1 = new StudentArrayDeque<Integer>();
+      StudentLinkedListDeque<Integer> saq1 = new StudentLinkedListDeque<Integer>();
       for(int i =1;i<=20;i++) {
         saq1.addFirst(i);
       }
@@ -193,7 +190,9 @@ public class TestArrayDeque1B {
       int size = saq1.size();
       assertEquals(4,size);
       int result =saq1.get(3);
-      assertEquals(17,result);
+      assertEquals("Oh noooo!\nThis is bad:\n resize and get the first number " + result
+                   + " not equal to " + "17" + "!",
+                   17, result);
     }
 
 
@@ -201,7 +200,7 @@ public class TestArrayDeque1B {
 
 
     public static void main(String... args) {
-        jh61b.junit.TestRunner.runTests("all", TestArrayDeque1B.class);
+          jh61b.junit.TestRunner.runTests("all", TestLinkedListDeque1B.class);
     }
 
 }
