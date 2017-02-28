@@ -92,6 +92,7 @@ public class Plip extends Creature {
      */
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
         return new Action(Action.ActionType.STAY);
+        
     }
 
 }
